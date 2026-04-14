@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 
 // ── Axios Instance ─────────────────────────────────────────────
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
+  baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://full-stack-application-l1a2.onrender.com',
   headers: { 'Content-Type': 'application/json' },
   timeout: 10000,
 });
