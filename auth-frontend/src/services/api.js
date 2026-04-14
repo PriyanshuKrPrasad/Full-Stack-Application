@@ -55,10 +55,10 @@ export const authAPI = {
 
 // ── Admin API (ADMIN role only) ────────────────────────────────
 export const adminAPI = {
-  getStats:   ()           => api.get('/admin/stats'),
-  getUsers:   (params)     => api.get('/admin/users', { params }),
-  changeRole: (id, role)   => api.patch(`/admin/users/${id}/role`, { role }),
-  deleteUser: (id)         => api.delete(`/admin/users/${id}`),
+  getStats:   ()         => api.get('/api/admin/stats'),
+  getUsers:   (params)   => api.get('/api/admin/users', { params }),
+  changeRole: (id, role) => api.patch(`/api/admin/users/${id}/role`, { role }),
+  deleteUser: (id)       => api.delete(`/api/admin/users/${id}`),
 };
 
 export default api;
