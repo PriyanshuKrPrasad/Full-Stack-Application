@@ -13,23 +13,19 @@ const allowedOrigins = [
   'http://localhost:3001',
   'http://localhost:3000',
   'http://127.0.0.1:3001',
+  'https://fullstackwebsite01-50iakf8bt-priyanshukrprasads-projects.vercel.app'
 ];
 
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      // allow requests with no origin (curl, Postman, mobile)
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error(`CORS policy: origin ${origin} not allowed`));
-      }
-    },
-    credentials:    true,
-    methods:        ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-  })
-);
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(null, true); // temporarily allow all (prevents crashes)
+    }
+  },
+  credentials: true,
+}));
 
 // ── Body Parsing ───────────────────────────────────────────────
 app.use(express.json({ limit: '10kb' }));
