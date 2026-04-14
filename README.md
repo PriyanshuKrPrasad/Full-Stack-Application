@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ⚡ AuthKit — Full-Stack JWT Authentication
 
 > **Node.js + Express + MySQL + Prisma ORM + Next.js 14**  
@@ -266,3 +267,7 @@ curl -X POST http://localhost:3000/api/auth/login \
 curl http://localhost:3000/api/auth/profile \
   -H "Authorization: Bearer YOUR_TOKEN_HERE"
 ```
+=======
+# Full-Stack-Application
+commit ...
+>>>>>>> 15bf9e3f0d3a1dca5269248d12165debd298f4ed
