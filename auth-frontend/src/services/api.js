@@ -47,10 +47,10 @@ export const getToken    = ()  => Cookies.get('authkit_token');
 
 // ── Auth API ───────────────────────────────────────────────────
 export const authAPI = {
-  register:      (data) => api.post('/auth/register', data),
-  login:         (data) => api.post('/auth/login', data),
-  getProfile:    ()     => api.get('/auth/profile'),
-  updateProfile: (data) => api.patch('/auth/profile', data),
+  register:      (data) => api.post('/api/auth/register', data),
+  login:         (data) => api.post('/api/auth/login', data),
+  getProfile:    ()     => api.get('/api/auth/profile'),
+  updateProfile: (data) => api.patch('/api/auth/profile', data),
 };
 
 // ── Admin API (ADMIN role only) ────────────────────────────────
